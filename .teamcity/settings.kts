@@ -8,6 +8,7 @@ version = "2018.2"
 
 project {
     vcsRoot(TeamCityTestVcs)
+    //id() ?
 
     sequence {
         build(Step1)
@@ -56,6 +57,8 @@ object Step3 : BuildType({
 object TeamCityTestVcs : GitVcsRoot({
     name = "TeamCityTestVcs"
     url = "git@github.com:ot-andreas/teamcity-test.git"
+    branch = "refs/heads/main"
+
     authMethod = uploadedKey {
         uploadedKey = "guestcenter-tc"
     }

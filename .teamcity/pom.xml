@@ -40,44 +40,44 @@
         </pluginRepository>
     </pluginRepositories>
 
-<!--    <build>-->
-<!--        <testSourceDirectory>tests</testSourceDirectory>-->
-<!--        <sourceDirectory>settings</sourceDirectory>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <artifactId>kotlin-maven-plugin</artifactId>-->
-<!--                <groupId>org.jetbrains.kotlin</groupId>-->
-<!--                <version>${kotlin.version}</version>-->
+    <build>
+        <testSourceDirectory>tests</testSourceDirectory>
+        <sourceDirectory>settings</sourceDirectory>
+        <plugins>
+            <plugin>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <version>${kotlin.version}</version>
 
-<!--                <configuration/>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>compile</id>-->
-<!--                        <phase>process-sources</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>compile</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                    <execution>-->
-<!--                        <id>test-compile</id>-->
-<!--                        <phase>process-test-sources</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>test-compile</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.jetbrains.teamcity</groupId>-->
-<!--                <artifactId>teamcity-configs-maven-plugin</artifactId>-->
-<!--                <version>${teamcity.dsl.version}</version>-->
-<!--                <configuration>-->
-<!--                    <format>kotlin</format>-->
-<!--                    <dstDir>target/generated-configs</dstDir>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
+                <configuration/>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>test-compile</id>
+                        <phase>process-test-sources</phase>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jetbrains.teamcity</groupId>
+                <artifactId>teamcity-configs-maven-plugin</artifactId>
+                <version>${teamcity.dsl.version}</version>
+                <configuration>
+                    <format>kotlin</format>
+                    <dstDir>target/generated-configs</dstDir>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>

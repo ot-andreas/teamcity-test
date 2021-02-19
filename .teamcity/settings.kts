@@ -1,10 +1,12 @@
 import jetbrains.buildServer.configs.kotlin.v2018_2.*
+import jetbrains.buildServer.configs.kotlin.v10.toExtId
+import jetbrains.buildServer.configs.kotlin.v2018_2.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.v2018_2.triggers.vcs
+import jetbrains.buildServer.configs.kotlin.v2018_2.vcs.GitVcsRoot
 
 version = "2018.2"
 
-project(SpringPetclinic)
-
-object SpringPetclinic : Project({
+project {
     vcsRoot(TeamCityTestVcs)
 
     sequence {
@@ -12,7 +14,7 @@ object SpringPetclinic : Project({
         build(Step2)
         build(Step3)
     }
-})
+}
 
 object Step1 : BuildType({
     name = "Step 1"
@@ -39,6 +41,7 @@ object Step2 : BuildType({
         }
     }
 })
+
 object Step3 : BuildType({
     name = "Step 3"
 

@@ -53,6 +53,9 @@ object Step3 : BuildType({
 object TeamCityTestVcs : GitVcsRoot({
     name = "TeamCityTestVcs"
     url = "git@github.com:ot-andreas/teamcity-test.git"
+    authMethod = uploadedKey {
+        uploadedKey = "guestcenter-tc"
+    }
 })
 
 
